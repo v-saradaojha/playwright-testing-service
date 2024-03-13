@@ -16,17 +16,18 @@ jobs:
     - uses: actions/setup-node@v3
       with:
         node-version: 20
+    - name: set up reporting
+      working-directory: samples/get-started
+      run: |
+        npm set //npm.pkg.github.com/:_authToken {{PAT_TOKEN_PACKAGE}}
+        npm install
+        
     - name: Install dependencies
       working-directory: samples/get-started
       run: npm ci
     - name: Install Playwright Browsers
       working-directory: samples/get-started
       run: npx playwright install --with-deps
-    - name: set up reporting
-      working-directory: samples/get-started
-      run: |
-        npm set //npm.pkg.github.com/:_authToken {{PAT_TOKEN_PACKAGE}}
-        npm install
     - name: Run Playwright tests
       working-directory: samples/get-started
       env:
