@@ -6,7 +6,7 @@ const TEST_ITERATIONS = parseInt(process.env.TEST_ITERATIONS || "100");
 for (var i = 0; i < TEST_ITERATIONS; i++) {
 
   test('has title ' + i, async ({ page }) => {
-    if (i % skip ==0 )
+    if (i == 2 || i==6 || i== 8 || i==10 || i == 50 ||  i == 80  || i == 100 || i == 150 )
      {
        test.skip();
      }
@@ -26,7 +26,7 @@ for (var i = 0; i < TEST_ITERATIONS; i++) {
     await expect(page).toHaveURL(/.*intro/);
     
     const randomResult = Math.random();
-    expect(randomResult).toBeGreaterThan(0.4);
+    expect(randomResult).toBeGreaterThan(0.2);
   });
 
 }
