@@ -6,7 +6,7 @@ const TEST_ITERATIONS = parseInt(process.env.TEST_ITERATIONS || "100");
 for (var i = 0; i < TEST_ITERATIONS; i++) {
 
   test('has title ' + i, async ({ page }) => {
-    if (i == 2 || i==6 || i== 8 || i==10 || i == 50 ||  i == 80  || i == 100 || i == 150 )
+    if (parseint(i) == 2 || parseint(i)==6 || parseint(i)== 8 || parseint(i) == 10 || parseint(i) == 50)
      {
        test.skip();
      }
