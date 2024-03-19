@@ -1,12 +1,13 @@
 import { test, expect } from '@playwright/test';
 
 // This sample simulates a larger test suite
-const skip= Math.random()*100;
+
 const TEST_ITERATIONS = parseInt(process.env.TEST_ITERATIONS || "100");
 for (var i = 0; i < TEST_ITERATIONS; i++) {
 
   test('has title ' + i, async ({ page }) => {
-    if (parseint(i) == 2 || parseint(i)==6 || parseint(i)== 8 || parseint(i) == 10 || parseint(i) == 50)
+    const skip= Math.random();
+    if (skip > 0.9)
      {
        test.skip();
      }
