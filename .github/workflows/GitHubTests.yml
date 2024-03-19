@@ -11,6 +11,11 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        shardIndex: [1, 2, 3, 4]
+        shardTotal: [4]
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
@@ -35,7 +40,7 @@ jobs:
         PLAYWRIGHT_SERVICE_URL: ${{ secrets.PLAYWRIGHT_SERVICE_URL_REPORTING}}
         PLAYWRIGHT_SERVICE_RUN_ID: ${{ github.run_id }}-${{ github.run_attempt }}-${{ github.sha }}
       # run: npx playwright test -c playwright.service.config.ts --workers=50
-      run: npx playwright test 
+      run: npx playwright test --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }} 
     - uses: actions/upload-artifact@v3
       if: always()
       with:
