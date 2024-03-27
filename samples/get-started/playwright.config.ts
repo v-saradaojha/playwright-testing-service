@@ -9,6 +9,8 @@ export default defineConfig({
   reporter: [['html'],['blob'],['github'],['list'], ['@microsoft/mpt-reporter']],
   use: {
     trace: 'on-first-retry',
+    video:'retain-on-failure',
+    screenshot:'on'
   },
   projects: [
     {
