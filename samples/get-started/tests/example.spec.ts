@@ -1,11 +1,11 @@
 import { test, expect } from '@playwright/test';
 
 // This sample simulates a larger test suite
-
-const TEST_ITERATIONS = parseInt(process.env.TEST_ITERATIONS || "100");
+var tags=['@smoke', '@sanity', '@issue'];
+const TEST_ITERATIONS = parseInt(process.env.TEST_ITERATIONS || "5");
 for (var i = 0; i < TEST_ITERATIONS; i++) {
-
-  test('has title ' + i, async ({ page }) => {
+  var tagid= i % 3;
+  test('has title ' + i+ tags[tagid], async ({ page }) => {
     const skip= Math.random();
     if (skip > 0.9)
      {
@@ -17,7 +17,7 @@ for (var i = 0; i < TEST_ITERATIONS; i++) {
     await expect(page).toHaveTitle(/Playwright/);
   });
 
-  test('get started link ' + i, async ({ page }) => {
+  test('get started link ' + i+ tags[tagid], async ({ page }) => {
     await page.goto('https://playwright.dev/');
 
     // Click the get started link.
@@ -29,5 +29,4 @@ for (var i = 0; i < TEST_ITERATIONS; i++) {
     const randomResult = Math.random();
     expect(randomResult).toBeGreaterThan(0.2);
   });
-
 }
