@@ -1,5 +1,5 @@
 
-# Support for Microsoft Playwright Testing
+# Support for Microsoft Playwright Testing.
 
 We're here to help you with any questions, issues, or concerns you may have while using [Your Project Name]. You have two options for getting support:
 
