@@ -99,7 +99,7 @@ jobs:
         run: echo "RUNNER_TOOL_CACHE=$RUNNER_TOOL_CACHE"
 
   print_pull_request_info:
-    name: Print Pull Request Information
+    name: Print Pull Request Info
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
