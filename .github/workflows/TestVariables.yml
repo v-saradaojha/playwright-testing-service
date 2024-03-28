@@ -1,0 +1,99 @@
+name: Print Environment Variables
+ 
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+jobs:
+  print_variables:
+    name: Print Environment Variables
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print CI variable
+        run: echo "CI=$CI"
+      - name: Print GITHUB_ACTION variable
+        run: echo "GITHUB_ACTION=$GITHUB_ACTION"
+      - name: Print GITHUB_ACTION_PATH variable
+        run: echo "GITHUB_ACTION_PATH=$GITHUB_ACTION_PATH"
+      - name: Print GITHUB_ACTION_REPOSITORY variable
+        run: echo "GITHUB_ACTION_REPOSITORY=$GITHUB_ACTION_REPOSITORY"
+      - name: Print GITHUB_ACTIONS variable
+        run: echo "GITHUB_ACTIONS=$GITHUB_ACTIONS"
+      - name: Print GITHUB_ACTOR variable
+        run: echo "GITHUB_ACTOR=$GITHUB_ACTOR"
+      - name: Print GITHUB_ACTOR_ID variable
+        run: echo "GITHUB_ACTOR_ID=$GITHUB_ACTOR_ID"
+      - name: Print GITHUB_API_URL variable
+        run: echo "GITHUB_API_URL=$GITHUB_API_URL"
+      - name: Print GITHUB_BASE_REF variable
+        run: echo "GITHUB_BASE_REF=$GITHUB_BASE_REF"
+      - name: Print GITHUB_ENV variable
+        run: echo "GITHUB_ENV=$GITHUB_ENV"
+      - name: Print GITHUB_EVENT_NAME variable
+        run: echo "GITHUB_EVENT_NAME=$GITHUB_EVENT_NAME"
+      - name: Print GITHUB_EVENT_PATH variable
+        run: echo "GITHUB_EVENT_PATH=$GITHUB_EVENT_PATH"
+      - name: Print GITHUB_GRAPHQL_URL variable
+        run: echo "GITHUB_GRAPHQL_URL=$GITHUB_GRAPHQL_URL"
+      - name: Print GITHUB_HEAD_REF variable
+        run: echo "GITHUB_HEAD_REF=$GITHUB_HEAD_REF"
+      - name: Print GITHUB_JOB variable
+        run: echo "GITHUB_JOB=$GITHUB_JOB"
+      - name: Print GITHUB_OUTPUT variable
+        run: echo "GITHUB_OUTPUT=$GITHUB_OUTPUT"
+      - name: Print GITHUB_PATH variable
+        run: echo "GITHUB_PATH=$GITHUB_PATH"
+      - name: Print GITHUB_REF variable
+        run: echo "GITHUB_REF=$GITHUB_REF"
+      - name: Print GITHUB_REF_NAME variable
+        run: echo "GITHUB_REF_NAME=$GITHUB_REF_NAME"
+      - name: Print GITHUB_REF_PROTECTED variable
+        run: echo "GITHUB_REF_PROTECTED=$GITHUB_REF_PROTECTED"
+      - name: Print GITHUB_REF_TYPE variable
+        run: echo "GITHUB_REF_TYPE=$GITHUB_REF_TYPE"
+      - name: Print GITHUB_REPOSITORY variable
+        run: echo "GITHUB_REPOSITORY=$GITHUB_REPOSITORY"
+      - name: Print GITHUB_REPOSITORY_ID variable
+        run: echo "GITHUB_REPOSITORY_ID=$GITHUB_REPOSITORY_ID"
+      - name: Print GITHUB_REPOSITORY_OWNER variable
+        run: echo "GITHUB_REPOSITORY_OWNER=$GITHUB_REPOSITORY_OWNER"
+      - name: Print GITHUB_REPOSITORY_OWNER_ID variable
+        run: echo "GITHUB_REPOSITORY_OWNER_ID=$GITHUB_REPOSITORY_OWNER_ID"
+      - name: Print GITHUB_RETENTION_DAYS variable
+        run: echo "GITHUB_RETENTION_DAYS=$GITHUB_RETENTION_DAYS"
+      - name: Print GITHUB_RUN_ATTEMPT variable
+        run: echo "GITHUB_RUN_ATTEMPT=$GITHUB_RUN_ATTEMPT"
+      - name: Print GITHUB_RUN_ID variable
+        run: echo "GITHUB_RUN_ID=$GITHUB_RUN_ID"
+      - name: Print GITHUB_RUN_NUMBER variable
+        run: echo "GITHUB_RUN_NUMBER=$GITHUB_RUN_NUMBER"
+      - name: Print GITHUB_SERVER_URL variable
+        run: echo "GITHUB_SERVER_URL=$GITHUB_SERVER_URL"
+      - name: Print GITHUB_SHA variable
+        run: echo "GITHUB_SHA=$GITHUB_SHA"
+      - name: Print GITHUB_STEP_SUMMARY variable
+        run: echo "GITHUB_STEP_SUMMARY=$GITHUB_STEP_SUMMARY"
+      - name: Print GITHUB_TRIGGERING_ACTOR variable
+        run: echo "GITHUB_TRIGGERING_ACTOR=$GITHUB_TRIGGERING_ACTOR"
+      - name: Print GITHUB_WORKFLOW variable
+        run: echo "GITHUB_WORKFLOW=$GITHUB_WORKFLOW"
+      - name: Print GITHUB_WORKFLOW_REF variable
+        run: echo "GITHUB_WORKFLOW_REF=$GITHUB_WORKFLOW_REF"
+      - name: Print GITHUB_WORKFLOW_SHA variable
+        run: echo "GITHUB_WORKFLOW_SHA=$GITHUB_WORKFLOW_SHA"
+      - name: Print GITHUB_WORKSPACE variable
+        run: echo "GITHUB_WORKSPACE=$GITHUB_WORKSPACE"
+      - name: Print RUNNER_ARCH variable
+        run: echo "RUNNER_ARCH=$RUNNER_ARCH"
+      - name: Print RUNNER_DEBUG variable
+        run: echo "RUNNER_DEBUG=$RUNNER_DEBUG"
+      - name: Print RUNNER_NAME variable
+        run: echo "RUNNER_NAME=$RUNNER_NAME"
+      - name: Print RUNNER_OS variable
+        run: echo "RUNNER_OS=$RUNNER_OS"
+      - name: Print RUNNER_TEMP variable
+        run: echo "RUNNER_TEMP=$RUNNER_TEMP"
+      - name: Print RUNNER_TOOL_CACHE variable
+        run: echo "RUNNER_TOOL_CACHE=$RUNNER_TOOL_CACHE"
