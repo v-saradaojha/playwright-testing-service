@@ -14,9 +14,9 @@ import dotenv from 'dotenv';
 
 // Define environment in your GitHub workflow spec.
 //  env:
-    process.env.PLAYWRIGHT_SERVICE_ACCESS_TOKEN: ${{ secrets.PLAYWRIGHT_SERVICE_ACCESS_TOKEN }}
-    process.env.PLAYWRIGHT_SERVICE_URL: ${{ secrets.PLAYWRIGHT_SERVICE_URL }}
-    process.env.PLAYWRIGHT_SERVICE_RUN_ID: ${{ github.run_id }}-${{ github.run_attempt }}-${{ github.sha }}
+    process.env.PLAYWRIGHT_SERVICE_ACCESS_TOKEN= ${{ secrets.PLAYWRIGHT_SERVICE_ACCESS_TOKEN }}
+    process.env.PLAYWRIGHT_SERVICE_URL= ${{ secrets.PLAYWRIGHT_SERVICE_URL }}
+    process.env.PLAYWRIGHT_SERVICE_RUN_ID= ${{ github.run_id }}-${{ github.run_attempt }}-${{ github.sha }}
 
 dotenv.config();
 
