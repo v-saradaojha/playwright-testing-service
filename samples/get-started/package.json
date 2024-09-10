@@ -10,11 +10,13 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@playwright/test": "^1.41.1",
+    "@azure/microsoft-playwright-testing": "^1.0.0-beta.1",
+    "@playwright/test": "^1.47.0",
+    "@types/node": "^22.5.4"
     "dotenv": "^16.0.3"
   },
   "dependencies": {
-    "playwright": "^1.41.1",
-    "@microsoft/mpt-reporter": "0.1.1-alpha-9140689274-1.0"
+    "@azure/microsoft-playwright-testing": "^1.0.0-beta.1",
+    "@playwright/test": "^1.47.0"
   }
 }
