@@ -12,11 +12,11 @@
   "devDependencies": {
     "@azure/microsoft-playwright-testing": "^1.0.0-beta.1",
     "@playwright/test": "^1.47.0",
-    "@types/node": "^22.5.4"
+    "@types/node": "^22.5.4",
     "dotenv": "^16.0.3"
   },
   "dependencies": {
-    "@azure/microsoft-playwright-testing": "^1.0.0-beta.1",
-    "@playwright/test": "^1.47.0"
+    "@playwright/test": "^1.47.0",
+    "uuid": "^9.0.1"
   }
 }
