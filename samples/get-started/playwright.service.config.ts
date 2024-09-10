@@ -6,9 +6,6 @@ import { v4 as uuid } from 'uuid';
 dotenv.config();
 /* Learn more about service configuration at https://aka.ms/mpt/config */
 
-process.env.PLAYWRIGHT_SERVICE_ACCESS_TOKEN = ${ { secrets.PLAYWRIGHT_SERVICE_ACCESS_TOKEN } };
-process.env.PLAYWRIGHT_SERVICE_URL = ${ { secrets.PLAYWRIGHT_SERVICE_URL } };
-process.env.PLAYWRIGHT_SERVICE_RUN_ID = ${ { github.run_id } } -${ { github.run_attempt } } -${ { github.sha } };
 export default defineConfig(
   config,
   getServiceConfig(config, {
