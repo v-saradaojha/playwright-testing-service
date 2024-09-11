@@ -9,8 +9,7 @@ dotenv.config();
 export default defineConfig(
   config,
   getServiceConfig(config, {
-    serviceAuthType: 'ACCESS_TOKEN',
-    runId: uuid(),
+    serviceAuthType: 'ACCESS_TOKEN',    
     exposeNetwork: '<loopback>',
     timeout: 30000,
     os: ServiceOS.LINUX,
