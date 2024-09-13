@@ -1,9 +1,8 @@
 import { defineConfig } from '@playwright/test';
 import { getServiceConfig, ServiceOS } from '@azure/microsoft-playwright-testing';
 import config from './playwright.config';
-import dotenv from 'dotenv';
 import { v4 as uuid } from 'uuid';
-dotenv.config();
+
 /* Learn more about service configuration at https://aka.ms/mpt/config */
 
 export default defineConfig(
