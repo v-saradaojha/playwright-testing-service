@@ -2,8 +2,8 @@ import { test, expect } from '@playwright/test';
 
 // This sample simulates a larger test suite
 var tags=['@smoke', '@sanity', '@issue'];
-
-const TEST_ITERATIONS = parseInt(process.env.TEST_ITERATIONS || "10000");
+//
+const TEST_ITERATIONS = parseInt(process.env.TEST_ITERATIONS || "8500");
 for (var i = 0; i < TEST_ITERATIONS; i++) {
   var tagid= i % 3;
   test('has title ' + i+ tags[tagid], async ({ page }) => {
