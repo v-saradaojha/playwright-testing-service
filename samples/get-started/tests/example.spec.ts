@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 // This sample simulates a larger test suite
 var tags=['@smoke', '@sanity', '@issue'];
-//eastaisa test//
+//westus3 test//
 const TEST_ITERATIONS = parseInt(process.env.TEST_ITERATIONS || "6000");
 for (var i = 0; i < TEST_ITERATIONS; i++) {
   var tagid= i % 3;
