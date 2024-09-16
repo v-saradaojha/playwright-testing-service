@@ -20,28 +20,22 @@ jobs:
     - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
       with:
-        node-version: 20
-    # - name: set up reporting
-    #   working-directory: samples/get-started
-    #   run: |        
-    #     # npm set //npm.pkg.github.com/:_authToken ${{secrets.PAT_TOKEN_PACKAGE}}
-    #     npm install
-        
+        node-version: 20   
     - name: Install dependencies
       working-directory: samples/get-started
-      run: npm ci
+      run: npm install
     - name: Install Playwright Browsers
       working-directory: samples/get-started
       run: npx playwright install --with-deps
     - name: Run Playwright tests
       working-directory: samples/get-started
       env:
-        PLAYWRIGHT_SERVICE_ACCESS_TOKEN: ${{secrets.PLAYWRIGHT_SERVICE_EASTASIA_ACCESS_TOKEN_REPORTING}}
-        PLAYWRIGHT_SERVICE_URL: ${{ vars.PLAYWRIGHT_SERVICE_EASTASIA_URL_REPORTING }}
+        PLAYWRIGHT_SERVICE_ACCESS_TOKEN: ${{secrets.PLAYWRIGHT_SERVICE_ACCESS_TOKEN_REPORTING}}
+        PLAYWRIGHT_SERVICE_URL: ${{ secrets.PLAYWRIGHT_SERVICE_URL_REPORTING }}
         PLAYWRIGHT_SERVICE_RUN_ID: ${{ github.run_id }}-${{ github.run_attempt }}-${{ github.sha }}
         debug: MPTReporter
       # run: npx playwright test --config=playwright.service.config.ts --workers=30
-      run: npx playwright test --config=playwright.service.config.ts --workers=50 --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }} 
+      run: npx playwright test --config=playwright.service.config.ts --workers=30 --shard=${{ matrix.shardIndex }}/${{ matrix.shardTotal }} 
     - uses: actions/upload-artifact@v3
       if: always()
       with:

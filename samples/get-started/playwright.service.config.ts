@@ -8,8 +8,7 @@ import { v4 as uuid } from 'uuid';
 export default defineConfig(
   config,
   getServiceConfig(config, {
-    serviceAuthType: 'ACCESS_TOKEN',    
-    exposeNetwork: '<loopback>',
+    serviceAuthType: 'ACCESS_TOKEN',  
     useCloudHostedBrowsers: true,
     timeout: 30000,
     os: ServiceOS.LINUX,
