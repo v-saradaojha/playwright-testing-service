@@ -23,8 +23,7 @@ jobs:
         node-version: 20
     - name: set up reporting
       working-directory: samples/get-started
-      run: |        
-        # npm set //npm.pkg.github.com/:_authToken ${{secrets.PAT_TOKEN_PACKAGE}}
+      run: |      
         npm install
         
     - name: Install dependencies
