@@ -24,6 +24,7 @@ jobs:
     - name: set up reporting
       working-directory: samples/get-started
       run: |
+        npm cache clean --force
         npm set //npm.pkg.github.com/:_authToken ${{secrets.PAT_TOKEN_PACKAGE}}
         npm install
         
